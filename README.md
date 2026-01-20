@@ -7,7 +7,7 @@ Además, consumir APIs externas con Retrofit, usando la API pública de Rick y M
 # Características principales
 autenticación, listado de episodios, filtro, marcado como visto, ajustes, estadísticas, etc.
 # Tecnologías utilizadas
-Firebase (Auth + Firestore), Retrofit, RecyclerView, SharedPreferences, Material Components, etc.
+Firebase (Auth + Firestore), Retrofit, RecyclerView, SharedPreferences, Material Components
 # Instrucciones de uso
 - cómo clonar
 - configurar Firebase
