@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">RickandMorty</string>
+    <string name="fui_welcome_back_password_prompt_title">¡Qué bueno verte de nuevo!</string>
+    <string name="fui_welcome_back_password_prompt_body">Introduce tu clave para entrar al mundo de Rick y Morty</string>
+    <string name="fui_sign_in_default_button_text">Entrar</string>
+    <string name="fui_welcome_back_email_header">¡Bienvenido de nuevo!</string>
 </resources>
