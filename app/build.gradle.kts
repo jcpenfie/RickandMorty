@@ -41,6 +41,8 @@ android {
 
 dependencies {
     implementation(platform(libs.firebase.bom))
+    implementation("androidx.navigation:navigation-fragment-ktx:2.9.6")
+    implementation("androidx.navigation:navigation-ui-ktx:2.9.6")
     implementation(libs.firebase.auth)
     implementation(libs.firebase.ui.auth)
     implementation(libs.androidx.core.ktx)

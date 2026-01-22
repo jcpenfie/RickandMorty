@@ -3,6 +3,7 @@ package dam.jcpf.rickandmorty
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.fragment.NavHostFragment
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
 import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult
@@ -35,9 +36,14 @@ class MainActivity : AppCompatActivity() {
 
     private fun showMain() {
         setContentView(binding.root)
-        binding.logoutbtn.setOnClickListener {
-            signOut()
-        }
+
+        //Inicializamos el contenedor
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navController = navHostFragment.navController
+
+//        binding.logoutbtn.setOnClickListener {
+//            signOut()
+//        }
     }
 
     private fun signOut(){
