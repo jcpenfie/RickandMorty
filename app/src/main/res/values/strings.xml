@@ -9,4 +9,6 @@
     <string name="episode">Episode</string>
     <string name="date">01/01/2025</string>
     <string name="c_digo">SxxExx</string>
+    <string name="personajes">Personajes</string>
+    <string name="cargando">cargando</string>
 </resources>

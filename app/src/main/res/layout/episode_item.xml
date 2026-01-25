@@ -4,9 +4,7 @@
     android:id="@+id/card"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardCornerRadius="10dp"
     android:padding="10dp"
-    android:layout_margin="10dp"
     app:cardBackgroundColor="@color/white"
     >
 
@@ -28,4 +26,8 @@
             android:text="@string/date"
             android:textAlignment="viewEnd"/>
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
 </androidx.cardview.widget.CardView>
