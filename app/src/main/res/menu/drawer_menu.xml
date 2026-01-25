@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/episodios"
+        android:title="@string/episodios" />
+    <item
+        android:id="@+id/estadisticas"
+        android:title="@string/estad_sticas" />
+    <item
+        android:id="@+id/ajsutes"
+        android:title="@string/ajustes" />
+    <item
+        android:id="@+id/acerca_de"
+        android:title="@string/acerca_de" />
+</menu>
