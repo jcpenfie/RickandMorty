@@ -36,8 +36,14 @@ class MyAdapter(
     inner class MyViewHolder(private val binding: EpisodeItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bin(episode: Episodes) {
-            binding.episodeName.text = episode.name
+            binding.episodeName.text = episode.episode
             binding.episodeAirDate.text = episode.air_date
+
+//            if (isVisto(episode.id)){
+//                binding.card.setCardBackgroundColor(Color.LTGRAY)
+//            }else{
+//                binding.card.setCardBackgroundColor(Color.WHITE)
+//            }
 
             binding.root.setOnClickListener {
                 onClick(episode)

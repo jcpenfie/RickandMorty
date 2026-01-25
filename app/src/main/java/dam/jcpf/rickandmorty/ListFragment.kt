@@ -17,6 +17,7 @@ import kotlinx.coroutines.withContext
 class ListFragment : Fragment() {
 
     private lateinit var binding: FragmentListBinding
+    private var allEpisodes: List<Episodes> = emptyList()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
@@ -31,16 +32,29 @@ class ListFragment : Fragment() {
         binding.episodesRecyclerview.layoutManager = LinearLayoutManager(requireContext())
         // Lanzar corrutina
         lifecycleScope.launch {
-            val episodes = loadEpisodesFromRetrofit()
+            allEpisodes = loadEpisodesFromRetrofit()
+            showEpisodes(allEpisodes)
+        }
 
-            binding.episodesRecyclerview.adapter = MyAdapter(episodes) { selectedEpisode ->
-                val bundle = Bundle().apply {
-                    putString("name", selectedEpisode.name)
-                    putString("episode", selectedEpisode.episode)
-                    putString("airDate", selectedEpisode.air_date)
-                }
-                findNavController().navigate(R.id.detailsFragment, bundle)
+        binding.swtichSeen.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+//                val vistos = allEpisodes.filter { isVisto(it.id)}
+//                showEpisodes(vistos)
+            } else {
+                showEpisodes(allEpisodes)
             }
+        }
+    }
+
+    private fun showEpisodes(episodes: List<Episodes>) {
+        binding.episodesRecyclerview.adapter = MyAdapter(episodes) { selectedEpisode ->
+            val bundle = Bundle().apply {
+                putInt("id", selectedEpisode.id)
+                putString("name", selectedEpisode.name)
+                putString("episode", selectedEpisode.episode)
+                putString("airDate", selectedEpisode.air_date)
+            }
+            findNavController().navigate(R.id.detailsFragment, bundle)
         }
     }
 
