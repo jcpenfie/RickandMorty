@@ -5,10 +5,9 @@
     <string name="fui_sign_in_default_button_text">Entrar</string>
     <string name="fui_welcome_back_email_header">¡Bienvenido de nuevo!</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="episode">Episode</string>
-    <string name="date">01/01/2025</string>
-    <string name="c_digo">SxxExx</string>
+    <string name="episode">Episodio</string>
+    <string name="date" translatable="false">01/01/2025</string>
+    <string name="c_digo" translatable="false">SxxExx</string>
     <string name="personajes">Personajes</string>
     <string name="cargando">cargando</string>
     <string name="episodios">Episodios</string>
@@ -23,4 +22,5 @@
     <string name="lenguaje">lenguaje</string>
     <string name="temaoscuro">temaoscuro</string>
     <string name="cerrar_sesi_n">Cerrar sesión</string>
+    <string name="hello_blank_fragment">Hola fragmento en blanco</string>
 </resources>
